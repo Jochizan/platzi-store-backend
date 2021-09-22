@@ -1,0 +1,33 @@
+language: node_js
+
+cache:
+  directories:
+    - node_modules
+    - ~/.npm
+
+node_js:
+  - '12'
+
+git:
+  depth: 3
+
+script:
+  - yarn test
+
+notifications:
+  slack: app-webs:rjCXBuErVE1YoyiCcoaYiQ1Q
+  email:
+    reciepients:
+      - remnychizot2015@gmail.com
+      - jochizan.apps40@gmail.com
+    on_success: always
+    on_failure: always
+
+deploy:
+  provide: heroku
+  skip-cleanup: true
+  keep-history: true
+  api_key: e524a9ca-3816-49a7-a511-6ba4f6514b14
+  app: platzi-store-backend
+  on:
+    repo: Jochizan/platzi-store-backend
