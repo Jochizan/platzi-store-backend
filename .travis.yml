@@ -1,33 +1,28 @@
 language: node_js
-
 cache:
   directories:
     - node_modules
-    - ~/.npm
-
+    - '~/.npm'
 node_js:
   - '12'
-
 git:
   depth: 3
-
 script:
   - yarn test
-
 notifications:
-  slack: app-webs:rjCXBuErVE1YoyiCcoaYiQ1Q
+  slack:
+    secure: ErWeELcY5x2CdgZnMrFG0wDm6cxYvT3o6ie7sCxQ2kiryzMHhxcB9XG252b7Hbuiv5/DBkEwj8FD+LkmBdw8vxvNk6ki4qhaOH8YNSTMGaQ3HWO6Kuw5is9cbYG5jDN1RK0hXaZ3WM7he7lRCY6k4euZ1c39tkjV4t/oyzSDioUqCyJW2QHN+gSFwNC2kDPoF4yRijfLbCwb546nHhz4hLx13NfykMKc7eJQw66u+UmM2PsmL+Z4sjfKG9Jb80wFzVkqmSauaePrlQaGCa+s+7f0+tPAsug38cy6ifeqKyKLuPttIYxaOJ96X/CfjbR6Xjryd75yOc/nVbWyHItot2t+8GoeKzeI5GAouAFuM57SigWwgtVMUasN70hHqktnzDa6e4lNahBo0io7/ZyQaJcoHvj/vrCGSQJ2BWpkXgWdT0tjL5inkiJonPIMlsMmizFy8lb+4Af5r2qUYG3rjMleTKxcvDK/9V4pO8lUFbjTwlS7LwvPpj0s3/RwN9s48U6nNNEadATaZ/OYPaday0GfCASezDfMxLIFwsE/8riYTaz9dSVehCsnRT9TJLOSr+7m0webne1aG/PrToQ+RcXtp1T2Pz9hbtPLqoAj5pXWSS+1kwfhRrwRjhkoffW7fi8k2Sm3ub/4AmW5JdQZZBpW5Qi7wkg3Xcd9TBf0SM4=
   email:
     reciepients:
       - remnychizot2015@gmail.com
       - jochizan.apps40@gmail.com
     on_success: always
     on_failure: always
-
 deploy:
   provide: heroku
   skip-cleanup: true
   keep-history: true
-  api_key: e524a9ca-3816-49a7-a511-6ba4f6514b14
+  api_key: UgXzy+Onng1N+HPiJhsTaq31ONdYYFQn7JCemnvi4AJ0UJ/HsofsvgBPM11g8HP3IL0gfenw6f3sAfCTxVEd66Jm59SA73b3fxAIJLFrhzRhQaE/7m5d2mBmfASNxt5h0MoLfeT7iHueH9FxkcRBrLuXnlex5L4r79Fn6l55W7HxXy6QHj7ltsMKuwgHdRF8T9VCsRdi71vMOVorujQKiQUxm61n8TgCPXq4icLEynR5NmO27fuIJSA+jM7XtCnwxRfc83So7IW/KLhZS0LkhafCjnYikiKkkltDS5eZqXFPAQXdDuhmlGXoeQ3VLPGK2UpuUWzgFYfd80RJmfgn4MxRPoyb64YoWoWZ7peRA/L5drpjUg0Jur49UqkfRWL6nJ2njGfc9qlotp1QTQWHzqQPMZYBYLiyKOi22JVbNkq7z4UiLwt8vhpvvS5a+9S4AeQQX+bwbxwdNHhmVz6saoTNDL0jD1tNyYkAHMlQNCGVwljewDR1yFun2wr5BWOZT1K/YxRyTZPg1nPZCQB7xoPMtDyDxtMY2CkQrIHril9YwObcYh//V1Eo1RYdIXXfJbfRwlYR0OZ4H9ojOTffwy2kTe4EF/qqsr5lCc1sExQVoyoH5XG+KeQhnKWJfNYKeWC8mudyW+TP9Q7Loml2FJAui78SryN1YTxUuDG92No=
   app: plt-store-back
   on:
     repo: Jochizan/platzi-store-backend
