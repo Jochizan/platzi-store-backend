@@ -28,6 +28,6 @@ deploy:
   skip-cleanup: true
   keep-history: true
   api_key: e524a9ca-3816-49a7-a511-6ba4f6514b14
-  app: platzi-store-backend
+  app: plt-store-back
   on:
     repo: Jochizan/platzi-store-backend
